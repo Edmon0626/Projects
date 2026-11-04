@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="card-reader">
+        <div class="logo">
+            <h3> 🧺New Sale</h3>
+        </div>
+        <form id="billing-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="product-select">Select Product</label>
+                <select id="product-select" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label for="unit-price"> Unit price</label>
+                <input type="text" id="unit-price" class="form-control" readonly value="0.00">
+            </div>
+            <div class="form-row">
+                <div class="form-group-half">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" class="form-control" value="1" min="1"max="99">
+                </div>
+            </div>
+            <div class="form-group-half">
+                <label for="discount">Discount(%)</label>
+                <input type="number" id="discount" class="form-control" value="10" min="0" max="100">
+            </div>
+        </div>
+        </form>
+
+        <div class="card-receipt">
+            <div class="receipt-reader">
+                <div class="shop-title">MINI SHOP BILLING</div>
+                <div class="receipt-subtitle">Official Receipt</div>
+            </div>
+            <div class="receipt-divider"></div>
+            <div class="receipt-details"></div>
+                <div class="receipt-row">
+                    <span class="label">Products:</span>
+                    <span class="value" id="receipt-product">0.00</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="label">Unit Price:</span>
+                    <span class="value" id="receipt-price">0.00</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="label">Quantity:</span>
+                    <span class="value" id="receipt-quantity">0.00</span>
+                </div>
+                <div class="receipt-divider dashed"></div>
+                <div class="receipt-row">
+                    <span class="label">Subtotal:</span>
+                    <span class="value" id="receipt-subtotal">0.00</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="label">Discount:</span>
+                    <span class="value" id="receipt-discount">0.00</span>
+                </div>
+                <div class="receipt-divider dashed"></div>
+                <div class="receipt-row total row">
+                    <span class="label">Final Amount:</span>
+                    <span class="value" id="receipt-total">0.00</span>
+                </div>
+                <div class="receipt-footer">
+            <p>THANK YOU</p>
+            <small>Please come again</small>
+        </div>     
+        </div>
+         
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
